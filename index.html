@@ -3,457 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Literature Review — ที่ดินนนทบุรี/ปทุมธานี, wellness</title>
+<title>Literature Review — ที่ดินนนทบุรี/ปทุมธานี | wellness</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --primary: #1a237e;
-    --primary-light: #283593;
-    --primary-dark: #0d1452;
-    --accent: #42a5f5;
-    --accent-light: #e3f2fd;
-    --bg: #f5f6fa;
-    --card: #ffffff;
-    --text: #212121;
-    --text2: #546e7a;
-    --text3: #90a4ae;
-    --border: #e0e0e0;
-    --shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
+  :root{--primary:#1a237e;--primary-light:#283593;--primary-dark:#0d1452;--accent:#42a5f5;--accent-light:#e3f2fd;
+    --bg:#f5f6fa;--card:#fff;--text:#212121;--text2:#546e7a;--text3:#90a4ae;--border:#e0e0e0;--shadow:0 2px 8px rgba(0,0,0,.08);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:16px;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .header{background:linear-gradient(135deg,var(--primary-dark),var(--primary),var(--primary-light));color:#fff;padding:48px 24px;text-align:center;}
+  .header h1{font-size:30px;font-weight:700;margin-bottom:8px;}
+  .header .subtitle{font-size:14px;opacity:.8;font-weight:300;}
 
-  body {
-    font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.8;
-    font-size: 16px;
-  }
-
-  /* Header */
-  .header {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
-    color: white;
-    padding: 48px 24px;
-    text-align: center;
-  }
-  .header h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-  .header .subtitle {
-    font-size: 14px;
-    opacity: 0.8;
-    font-weight: 300;
-  }
-
-  /* Layout */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px 24px 64px;
-  }
+  .container{max-width:900px;margin:0 auto;padding:32px 24px 64px;}
 
   /* TOC */
-  #toc {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin-bottom: 32px;
-    box-shadow: var(--shadow);
-  }
-  #toc h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--accent);
-    display: inline-block;
-  }
-  #toc ul {
-    list-style: none;
-    columns: 2;
-    column-gap: 24px;
-  }
-  #toc li {
-    padding: 4px 0;
-    break-inside: avoid;
-  }
-  #toc a {
-    color: var(--primary-light);
-    text-decoration: none;
-    font-size: 15px;
-    display: block;
-    padding: 4px 8px;
-    border-radius: 6px;
-    transition: all 0.2s;
-  }
-  #toc a:hover {
-    background: var(--accent-light);
-    color: var(--primary);
-  }
+  #toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:32px;box-shadow:var(--shadow);}
+  #toc h3{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block;}
+  #toc>ul{list-style:none;columns:2;column-gap:24px;}
+  #toc li{padding:3px 0;break-inside:avoid;}
+  #toc a{color:var(--primary-light);text-decoration:none;font-size:14px;display:block;padding:3px 8px;border-radius:6px;transition:.2s;}
+  #toc a:hover{background:var(--accent-light);color:var(--primary);}
+  #toc ul ul{list-style:none;padding-left:16px;margin-top:2px;}
+  #toc ul ul a{font-size:13px;color:var(--text2);}
+
+  /* Topic header */
+  .topic-header{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:20px 28px;border-radius:12px;margin:40px 0 20px;}
+  .topic-header h2{font-size:22px;font-weight:700;margin:0;}
 
   /* Sections */
-  section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 28px 32px;
-    margin-bottom: 24px;
-    box-shadow: var(--shadow);
+  section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin-bottom:20px;box-shadow:var(--shadow);}
+  section h2{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:14px;padding-bottom:8px;border-bottom:3px solid var(--accent);display:inline-block;}
+  section h3{font-size:18px;font-weight:600;color:var(--primary-light);margin-bottom:12px;}
+  section p{margin-bottom:14px;text-align:left;}
+
+  /* Tooltip reference */
+  .ref{
+    color:var(--accent);text-decoration:none;font-size:11px;font-weight:600;
+    position:relative;cursor:pointer;
   }
-  section h2 {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--accent);
-    display: inline-block;
-  }
-  section p {
-    margin-bottom: 14px;
-    text-align: justify;
-    color: var(--text);
+  .ref:hover{color:var(--primary);}
+  .ref:hover::after{
+    content:attr(title);
+    position:absolute;bottom:100%;left:50%;transform:translateX(-50%);
+    background:#333;color:#fff;font-size:12px;font-weight:400;
+    padding:6px 10px;border-radius:6px;white-space:nowrap;
+    z-index:100;pointer-events:none;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
   }
 
-  /* Reference links */
-  a.ref {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 13px;
-    background: var(--accent-light);
-    padding: 2px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-    transition: all 0.2s;
-  }
-  a.ref:hover {
-    background: var(--accent);
-    color: white;
-  }
+  /* References */
+  #references{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin-top:40px;box-shadow:var(--shadow);}
+  #references h2{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--accent);display:inline-block;}
+  #references h4{font-size:15px;font-weight:600;}
+  #references ol{padding-left:24px;}
+  #references li{margin-bottom:8px;font-size:13px;color:var(--text2);line-height:1.6;}
+  #references a{color:var(--primary-light);text-decoration:none;}
+  #references a:hover{text-decoration:underline;}
 
-  /* References section */
-  #references ol {
-    padding-left: 24px;
-  }
-  #references li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: var(--text2);
-    line-height: 1.6;
-  }
-  #references a {
-    color: var(--primary-light);
-    text-decoration: none;
-  }
-  #references a:hover {
-    text-decoration: underline;
-  }
+  .footer{text-align:center;padding:24px;font-size:13px;color:var(--text3);border-top:1px solid var(--border);margin-top:48px;}
 
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 24px;
-    font-size: 13px;
-    color: var(--text3);
-    border-top: 1px solid var(--border);
-    margin-top: 48px;
+  @media(max-width:640px){
+    .header{padding:32px 16px;} .header h1{font-size:22px;}
+    .container{padding:16px 12px 48px;} section{padding:20px 16px;}
+    #toc>ul{columns:1;} .topic-header{padding:16px 20px;}
+    .ref:hover::after{white-space:normal;max-width:250px;left:0;transform:none;}
   }
-
-  /* Responsive */
-  @media (max-width: 640px) {
-    .header { padding: 32px 16px; }
-    .header h1 { font-size: 24px; }
-    .container { padding: 16px 12px 48px; }
-    section { padding: 20px 16px; }
-    #toc ul { columns: 1; }
-  }
-
-  /* Google Font */
-  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap');
 </style>
 </head>
 <body>
-
 <div class="header">
-  <h1>Literature Review — ที่ดินนนทบุรี/ปทุมธานี, wellness</h1>
-  <div class="subtitle">สร้างอัตโนมัติ ณ วันที่ 23/06/2026 14:42</div>
+  <h1>Literature Review — ที่ดินนนทบุรี/ปทุมธานี | wellness</h1>
+  <div class="subtitle">สร้างอัตโนมัติ ณ วันที่ 23/06/2026 15:18</div>
 </div>
-
 <div class="container">
 <nav id="toc">
   <h3>สารบัญ</h3>
   <ul>
-    <li><a href="#section-1">1. แนวคิดและความหมายของ Wellness</a></li>
-    <li><a href="#section-2">2. สังคมผู้สูงอายุและ Longevity Economy</a></li>
-    <li><a href="#section-3">3. ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ</a></li>
-    <li><a href="#section-4">4. แนวทางการส่งเสริมสุขภาพและชะลอความเสื่อมในผู้สูงอายุ</a></li>
-    <li><a href="#section-5">5. ศูนย์ Wellness และรูปแบบการให้บริการสุขภาพในประเทศไทย</a></li>
-    <li><a href="#section-6">6. การท่องเที่ยวเชิงสุขภาพและโอกาสทางธุรกิจ Wellness</a></li>
-    <li><a href="#section-7">7. ราคาที่ดินและการลงทุนในอสังหาริมทรัพย์</a></li>
-    <li><a href="#references">แหล่งอ้างอิง</a></li>
+    <li><a href="#topic-1">ที่ดินนนทบุรี/ปทุมธานี: การลงทุนและปัจจัยที่เกี่ยวข้อง</a>
+      <ul>
+        <li><a href="#section-1-1">หลักคิดและวัตถุประสงค์ในการซื้อที่ดิน</a></li>
+        <li><a href="#section-1-2">ประเภทราคาที่ดินและระบบการประเมิน</a></li>
+        <li><a href="#section-1-3">ค่าใช้จ่ายในการโอนกรรมสิทธิ์</a></li>
+        <li><a href="#section-1-4">พลวัตราคาที่ดินตามทำเลและสภาวะตลาด</a></li>
+        <li><a href="#section-1-5">ศักยภาพและปัจจัยขับเคลื่อนการพัฒนานนทบุรี/ปทุมธานี</a></li>
+        <li><a href="#section-1-6">ผังเมืองและผลกระทบต่อการพัฒนาอสังหาริมทรัพย์</a></li>
+        <li><a href="#section-1-7">โฉนด ส.ป.ก. และมิติการถือครองที่ดินเพื่อเกษตรกรรม</a></li>
+      </ul>
+    </li>
+    <li><a href="#topic-2">Wellness: แนวคิด บริการ และเศรษฐกิจสุขภาพ</a>
+      <ul>
+        <li><a href="#section-2-1">นิยามและแนวคิดของ Wellness</a></li>
+        <li><a href="#section-2-2">เทรนด์ Wellness และ Longevity Economy</a></li>
+        <li><a href="#section-2-3">ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ</a></li>
+        <li><a href="#section-2-4">แนวทางการส่งเสริมสุขภาพผู้สูงอายุ</a></li>
+        <li><a href="#section-2-5">ศูนย์ดูแลและฟื้นฟูสุขภาพผู้สูงอายุ</a></li>
+        <li><a href="#section-2-6">การท่องเที่ยวเชิงสุขภาพและ Wellness Destination</a></li>
+        <li><a href="#section-2-7">Wellness ในเชิงธุรกิจและการสร้างแบรนด์</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
-<section id="section-1">
-  <h2>1. แนวคิดและความหมายของ Wellness</h2>
-  <p>
-    คำว่า "Wellness" หรือสุขภาวะ หมายถึงความอยู่ดีมีสุขในองค์รวม การมีสุขภาพที่แข็งแรงสมบูรณ์เต็มร้อย เพื่อให้สามารถใช้ชีวิตได้อย่างที่ใจต้องการและมีชีวิตหลังเกษียณที่สมบูรณ์แบบ
-    <a href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=157" class="ref" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก [02:37]</a>
-    แนวคิดนี้มีรากฐานสำคัญอยู่ที่การมองสุขภาพเชิงป้องกันและองค์รวม กล่าวคือ ไม่ใช่เพียงการรักษาโรคเมื่อเจ็บป่วยแล้วเท่านั้น แต่ยังครอบคลุมการวิเคราะห์ ป้องกัน และตรวจหาความผิดปกติก่อนที่จะกลายเป็นโรคที่ต้องรักษาในโรงพยาบาล
-    <a href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=58" class="ref" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก [00:58]</a>
-  </p>
-  <p>
-    จากมุมมองของผู้ให้บริการ Wellness ในประเทศไทย ผู้รับบริการมักแบ่งออกเป็นสองกลุ่มหลัก คือกลุ่มคนแข็งแรงที่ต้องการดูแลและป้องกันเพื่อลงทุนเพื่ออนาคตสุขภาพที่ดี
-    <a href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=197" class="ref" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก [03:17]</a>
-    และกลุ่มที่มีอาการหรือโรคเรื้อรัง เช่น นอนไม่หลับ หรือสมรรถภาพถดถอย ซึ่งสามารถรับการดูแลเพื่อลดความเสี่ยงในอนาคตได้
-    <a href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=221" class="ref" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก [03:41]</a>
-    แนวคิดนี้สะท้อนให้เห็นชัดเจนในศาสตร์ Anti-Aging หรือศาสตร์ชะลอวัย ที่เน้นการดูแลสุขภาพก่อนจะเกิดโรค
-  </p>
-  <p>
-    ในบริบทของประเทศไทย กรมการแพทย์แผนไทยและการแพทย์ทางเลือกได้นำแนวคิด Wellness มาพัฒนาเป็น "ศูนย์เวลเนส" ในรูปแบบสถานบริการ 5 ประเภท ได้แก่ ร้านอาหาร โรงแรม ร้านนวด สปา และสถานบริการสุขภาพอื่นๆ
-    <a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=50" class="ref" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย [00:50]</a>
-    โดยมีเป้าหมายสำคัญในการผนวกอัตลักษณ์ความเป็นไทย ทั้งศาสตร์การแพทย์แผนไทย อาหารไทย สมุนไพรไทย และวิถีชีวิตไทย เข้าไปในศูนย์ Wellness เหล่านี้
-    <a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=111" class="ref" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย [01:51]</a>
-    เพื่อพัฒนาไปสู่มาตรฐาน TWD (Thainess Wellness Destination) ที่นักท่องเที่ยวทั่วโลกสามารถยึดถือได้
-    <a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=142" class="ref" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย [02:22]</a>
-  </p>
+<div class="topic-header" id="topic-1"><h2>ที่ดินนนทบุรี/ปทุมธานี: การลงทุนและปัจจัยที่เกี่ยวข้อง</h2></div>
+
+<section id="section-1-1">
+  <h3>หลักคิดและวัตถุประสงค์ในการซื้อที่ดิน</h3>
+  <p>ที่ดินถือเป็นสินทรัพย์ที่หลายคนนิยมสะสม เนื่องจากมูลค่ามีแนวโน้มสูงขึ้นในระยะยาวและสามารถเอาชนะเงินเฟ้อได้ ด้วยความเป็นทรัพย์สินที่จับต้องได้ จึงสร้างความรู้สึกเป็นเจ้าของที่แตกต่างจากสินทรัพย์ประเภทอื่น<sup><a class="ref" href="https://www.youtube.com/watch?v=pTVRothbGJo&t=11" title="หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q & A ] [00:11]">[1]</a></sup> อย่างไรก็ตาม ที่ดินมีสภาพคล่องต่ำ ทำให้การแปลงเป็นเงินสดทำได้ยากเมื่อจำเป็น<sup><a class="ref" href="https://www.youtube.com/watch?v=pTVRothbGJo&t=69" title="หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q & A ] [01:09]">[1]</a></sup></p>
+  <p>ก่อนตัดสินใจซื้อที่ดิน ผู้ลงทุนควรกำหนดวัตถุประสงค์ที่ชัดเจน เช่น สร้างบ้านพักหลังเกษียณ หรือเก็งกำไรจากโครงสร้างพื้นฐานที่จะตัดผ่าน<sup><a class="ref" href="https://www.youtube.com/watch?v=pTVRothbGJo&t=100" title="หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q & A ] [01:40]">[1]</a></sup> ประเด็นสำคัญอีกประการคือแหล่งเงินทุน หากใช้สินเชื่อ ต้องแน่ใจว่าภาระผ่อนชำระไม่กระทบคุณภาพชีวิต และหากซื้อด้วยเงินสด ไม่ควรทุ่มเงินสำรองทั้งหมด<sup><a class="ref" href="https://www.youtube.com/watch?v=pTVRothbGJo&t=158" title="หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q & A ] [02:38]">[1]</a></sup> นอกจากนี้ ศักยภาพของที่ดินต้องสอดคล้องกับวัตถุประสงค์ เช่น ที่ดินเพื่อเกษตรต้องการดินและน้ำที่ดี ส่วนที่ดินสร้างอพาร์ตเมนต์ต้องใกล้แหล่งงานหรือมหาวิทยาลัย และรูปทรงของที่ดินควรเป็นสี่เหลี่ยมเพื่อใช้ประโยชน์ได้ง่าย<sup><a class="ref" href="https://www.youtube.com/watch?v=pTVRothbGJo&t=200" title="หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q & A ] [03:20]">[1]</a></sup> และควรกระจายการลงทุนในสินทรัพย์หลายประเภทเพื่อหลีกเลี่ยงปัญหาสภาพคล่อง<sup><a class="ref" href="https://www.youtube.com/watch?v=pTVRothbGJo&t=275" title="หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q & A ] [04:35]">[1]</a></sup></p>
 </section>
 
-<section id="section-2">
-  <h2>2. สังคมผู้สูงอายุและ Longevity Economy</h2>
-  <p>
-    ประเทศไทยได้เข้าสู่สังคมผู้สูงอายุอย่างเต็มรูปแบบแล้วในปี พ.ศ. 2565 และคาดว่าอีกไม่เกิน 15 ปีข้างหน้าจะเข้าสู่สังคมสูงวัยระดับสุดยอด (Super Aged Society)
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1069" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [17:49]</a>
-    โดยนิยามผู้สูงอายุคือผู้ที่มีอายุ 60 ปีขึ้นไป และจำนวนผู้สูงอายุมีแนวโน้มเพิ่มขึ้นอย่างต่อเนื่อง
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=28" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [00:28]</a>
-    ในระดับโลก ข้อมูลจาก World Economic Forum (WEF) ชี้ให้เห็นว่าจำนวนผู้สูงอายุ 65 ปีขึ้นไปจะมีมากกว่าเด็กอายุต่ำกว่า 18 ปีทั่วโลกภายในปี 2080 และในเอเชียจะมีประชากร 65 ปีขึ้นไปถึง 60% ของโลกภายในปี 2060
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=70" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [01:10]</a>
-  </p>
-  <p>
-    WEF เสนอแนวคิด "Longevity Economy" หรือเศรษฐกิจที่เกิดจากการมีอายุยืนยาว โดยพยายามเปลี่ยนมุมมองว่าสังคมสูงวัยไม่ใช่ภาระอีกต่อไป แต่เป็นโอกาสทางเศรษฐกิจ
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=43" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [00:43]</a>
-    แนวคิดนี้นำไปสู่โมเดลชีวิตแบบใหม่ที่เรียกว่า "Multistage Life" ซึ่งไม่ใช่เพียงการเรียน-ทำงาน-เกษียณตามลำดับ แต่ครอบคลุมการเปลี่ยนผ่านอาชีพหลายครั้ง การเรียนรู้ทักษะใหม่ตลอดชีวิต (Lifelong Learning) และการมีส่วนร่วมในสังคมในหลากหลายรูปแบบ
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=649" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [10:49]</a>
-  </p>
-  <p>
-    อย่างไรก็ตาม ประเทศไทยยังเผชิญกับความท้าทายสำคัญ ได้แก่ ระบบบำนาญที่ยังไม่รองรับผู้มีรายได้น้อยหรือแรงงานนอกระบบ ซึ่งมีสัดส่วนถึง 50% ของแรงงานทั้งหมด ขณะที่มีเพียง 1 ใน 3 ของแรงงานไทยที่อยู่ในระบบประกันสังคม
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1094" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [18:14]</a>
-    ประกอบกับหนี้ครัวเรือนสูงและการขาดความรู้ทางการเงิน
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1296" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [21:36]</a>
-    ทำให้แรงกดดันต่อระบบสาธารณสุขและเศรษฐกิจมีแนวโน้มเพิ่มขึ้นอย่างมีนัยสำคัญ
-  </p>
-  <p>
-    WEF ได้ให้คำแนะนำ 6 ข้อในการปรับตัวรับมือ Longevity Economy ซึ่งรวมถึงการออกแบบระบบการเงินที่ยืดหยุ่น การสร้างระบบที่ส่งเสริมสุขภาพระยะยาว การสนับสนุนการเรียนรู้ตลอดชีวิต และการสร้างพื้นที่ให้ผู้สูงอายุมีบทบาทมากขึ้นในสังคม
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1237" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [20:37]</a>
-    สอดคล้องกับแนวทางของนักวิชาการที่เน้นว่าการสร้างความรู้สึกมีคุณค่าและบทบาทในสังคมเป็นปัจจัยสำคัญต่อสุขภาพจิตของผู้สูงอายุ
-    <a href="https://www.youtube.com/watch?v=Tr1Pr96UneY&t=531" class="ref" target="_blank">รายการศิริราชเพื่อผู้สูงอายุ [08:51]</a>
-  </p>
+<section id="section-1-2">
+  <h3>ประเภทราคาที่ดินและระบบการประเมิน</h3>
+  <p>ในการซื้อขายที่ดิน มีราคาที่เข้ามามีบทบาทอยู่ 4 ประเภท ได้แก่ ราคาประเมินจากกรมธนารักษ์ ราคาประเมินจากภาคเอกชนหรือธนาคาร ราคาท้องตลาด และราคาซื้อขายจริง<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=64" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [01:04]">[3]</a></sup> ราคาประเมินราชการเป็นราคาที่กรมธนารักษ์สำรวจและกำหนดขึ้นเพื่อใช้ในการทำนิติกรรม เช่น การคำนวณค่าโอนและค่าใช้จ่ายต่าง ๆ ณ วันโอน<sup><a class="ref" href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=59" title="ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน ต่างกันอย่างไร เปรียบเทียบชัดๆ ราคาต่างกันมาก! [00:59]">[4]</a></sup> ราคานี้มักต่ำกว่าราคาตลาดจริง ซึ่งเป็นประโยชน์ต่อผู้โอนในแง่ภาระค่าใช้จ่าย<sup><a class="ref" href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=66" title="ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน ต่างกันอย่างไร เปรียบเทียบชัดๆ ราคาต่างกันมาก! [01:06]">[4]</a></sup></p>
+  <p>ราคาประเมินจากภาคเอกชนหรือธนาคารจะพิจารณาจากหลายปัจจัยรวมกัน ทั้งราคาประเมินกรมที่ดิน ราคาท้องตลาด และสภาพคล่องของทรัพย์สินในบริเวณนั้น<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=271" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [04:31]">[3]</a></sup> โดยทั่วไปราคาประเมินจากภาคเอกชนและราคาท้องตลาดจะสูงกว่าราคาประเมินของกรมธนารักษ์ประมาณ 20-40% ซึ่งอาจเกิดจากปัจจัยพิเศษ เช่น โครงการรถไฟฟ้า การตัดถนนใหม่ หรือทางด่วน<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=386" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [06:26]">[3]</a></sup> ตัวอย่างที่เห็นได้ชัดคือทำเลสยามสแควร์ที่มีราคาตลาดสูงถึง 3,300,000 บาทต่อตารางวา<sup><a class="ref" href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=243" title="ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน ต่างกันอย่างไร เปรียบเทียบชัดๆ ราคาต่างกันมาก! [04:03]">[4]</a></sup> ในขณะที่ราคาประเมินราชการอยู่ในระดับต่ำกว่ามาก</p>
+  <p>ราคาซื้อขายจริงขึ้นอยู่กับการตกลงกันระหว่างผู้ซื้อและผู้ขาย หากผู้ซื้อต้องการที่ดินแปลงนั้นเป็นพิเศษก็อาจจ่ายสูงกว่าตลาด หรือหากผู้ขายร้อนเงินก็อาจขายต่ำกว่าตลาดได้<sup><a class="ref" href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=149" title="ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน ต่างกันอย่างไร เปรียบเทียบชัดๆ ราคาต่างกันมาก! [02:29]">[4]</a></sup></p>
 </section>
 
-<section id="section-3">
-  <h2>3. ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ</h2>
-  <p>
-    ปัญหาสุขภาพในผู้สูงอายุมีความหลากหลายและเชื่อมโยงกันอย่างซับซ้อน โดยสามารถจำแนกออกเป็นด้านต่างๆ ดังนี้
-  </p>
-  <p>
-    <strong>ด้านระบบประสาทและสมอง:</strong> ภาวะสมองเสื่อมหรือโรคอัลไซเมอร์เป็นปัญหาสำคัญที่พบมากขึ้นในปัจจุบัน ผู้สูงอายุอาจมีปัญหาความจำระยะสั้น หลงลืม และมีความเสี่ยงต่อโรคทางอารมณ์ เช่น ความรู้สึกโดดเดี่ยวและซึมเศร้า
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=53" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [00:53]</a>
-    ทั้งนี้ ความโดดเดี่ยวในผู้สูงอายุยังเพิ่มโอกาสเกิดภาวะสมองเสื่อมสูงขึ้นด้วย
-    <a href="https://www.youtube.com/watch?v=Tr1Pr96UneY&t=295" class="ref" target="_blank">รายการศิริราชเพื่อผู้สูงอายุ [04:55]</a>
-  </p>
-  <p>
-    <strong>ด้านระบบกล้ามเนื้อและกระดูก:</strong> ภาวะกล้ามเนื้อลดลงหรือ Sarcopenia และกระดูกพรุนเป็นปัญหาที่เพิ่มความเสี่ยงต่อการพลัดตกหกล้ม
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=152" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [02:32]</a>
-    การหกล้มถือเป็นเหตุการณ์อันตรายที่สุดสำหรับผู้สูงอายุ โดยมักเกิดจากการทรงตัวที่ไม่ดี ไม่ใช่เพียงขาอ่อนแรง
-    <a href="https://www.youtube.com/watch?v=FD-i1wcbJ0Y&t=300" class="ref" target="_blank">Leaders Podcast Ep.23 [05:00]</a>
-    นอกจากนี้ หลังอายุ 50 ปี VO2 Max จะลดลงเฉลี่ย 10% ต่อปี ทำให้การเคลื่อนไหวในชีวิตประจำวันใช้ความพยายามมากขึ้นอย่างเห็นได้ชัด
-    <a href="https://www.youtube.com/watch?v=FD-i1wcbJ0Y&t=240" class="ref" target="_blank">Leaders Podcast Ep.23 [04:00]</a>
-    ในมุมมองของแพทย์แผนไทย ปัญหาเหล่านี้เกิดจาก "ไฟชิรณัคคี" ที่ทำให้ระบบกล้ามเนื้อ ย่อยอาหาร เผาผลาญ และความชุ่มชื้นในร่างกายเสื่อมลงตามวัย
-    <a href="https://www.youtube.com/watch?v=H2BCcrwFCic&t=130" class="ref" target="_blank">ชะลอความเสื่อมร่างกาย [02:10]</a>
-  </p>
-  <p>
-    <strong>ด้านการนอนหลับและโภชนาการ:</strong> การนอนไม่หลับเกิดจากการผลิตเมลาโทนินลดลง ฮอร์โมนผิดปกติ หรือการใช้ยาบางชนิด ทำให้หลับไม่ดีและง่วงนอนช่วงกลางวัน
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=106" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [01:46]</a>
-    ขณะที่ภาวะย่อยอาหารและการบดเคี้ยวที่บกพร่องทำให้ผู้สูงอายุขาดวิตามินและแร่ธาตุจำเป็น เช่น วิตามิน D, C, A, B6, B12 ส่งผลให้เกิดภาวะทุพโภชนาการ
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=203" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [03:23]</a>
-  </p>
-  <p>
-    <strong>ด้านโรคเรื้อรังและระบบขับถ่าย:</strong> กลุ่มโรคเรื้อรัง เช่น เบาหวาน ความดันสูง ไขมันในเลือดสูง โรคไตและตับ เป็นปัญหาที่พบบ่อย โดยการใช้ยาหลายชนิดอาจซ้ำซ้อนกันและก่อให้เกิดผลข้างเคียง
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=318" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [05:18]</a>
-    ปัญหาระบบขับถ่าย เช่น การกลั้นปัสสาวะหรืออุจจาระไม่ได้ ยังเพิ่มความเสี่ยงต่อการติดเชื้อและลดคุณภาพชีวิตอย่างมีนัยสำคัญ
-    <a href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=271" class="ref" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ [04:31]</a>
-  </p>
-  <p>
-    <strong>ด้านสุขภาพจิตและความโดดเดี่ยว:</strong> ความโดดเดี่ยวเป็นปัญหาที่ส่งผลร้ายแรงทั้งทางกายและจิตใจ โดยเกิดจากหลายปัจจัย เช่น การเกษียณจากงาน การสูญเสียคู่สมรสหรือเพื่อนฝูง การลดบทบาทความสำคัญของตนเองในครอบครัว
-    <a href="https://www.youtube.com/watch?v=Tr1Pr96UneY&t=157" class="ref" target="_blank">รายการศิริราชเพื่อผู้สูงอายุ [02:37]</a>
-    ผลของความโดดเดี่ยวก่อให้เกิดโรคความดันโลหิตสูง โรคหัวใจ ภาวะซึมเศร้า และเพิ่มความเสี่ยงต่อภาวะสมองเสื่อม
-    <a href="https://www.youtube.com/watch?v=Tr1Pr96UneY&t=236" class="ref" target="_blank">รายการศิริราชเพื่อผู้สูงอายุ [03:56]</a>
-  </p>
+<section id="section-1-3">
+  <h3>ค่าใช้จ่ายในการโอนกรรมสิทธิ์</h3>
+  <p>ค่าใช้จ่ายในการโอนกรรมสิทธิ์ ณ สำนักงานที่ดิน ประกอบด้วยหลายรายการ ได้แก่ ค่าธรรมเนียมการโอนอัตรา 2% ของราคาประเมินกรมธนารักษ์<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=468" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [07:48]">[3]</a></sup> อากรแสตมป์ 0.5% ของราคาซื้อขายแต่ต้องไม่ต่ำกว่าราคาประเมินทุนทรัพย์<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=477" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [07:57]">[3]</a></sup> และภาษีธุรกิจเฉพาะ 3.3% สำหรับอสังหาริมทรัพย์ที่ถือครองไม่เกิน 5 ปีหรือมีชื่อในทะเบียนบ้านไม่ถึง 1 ปี<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=509" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [08:29]">[3]</a></sup> นอกจากนี้ยังมีภาษีเงินได้บุคคลธรรมดาที่คำนวณแบบขั้นบันได โดยหักค่าใช้จ่ายตามจำนวนปีที่ถือครอง<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=522" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [08:42]">[3]</a></sup> โดยทั่วไปค่าใช้จ่ายในการโอนจะแบ่งกันคนละครึ่ง ส่วนค่าจดจำนองเป็นภาระของผู้ซื้อ และภาษีธุรกิจเฉพาะเป็นภาระของผู้ขาย<sup><a class="ref" href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=553" title="ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro [09:13]">[3]</a></sup></p>
 </section>
 
-<section id="section-4">
-  <h2>4. แนวทางการส่งเสริมสุขภาพและชะลอความเสื่อมในผู้สูงอายุ</h2>
-  <p>
-    แนวทางการดูแลสุขภาพผู้สูงอายุอย่างองค์รวมครอบคลุมหลายมิติสำคัญ ดังนี้
-  </p>
-  <p>
-    <strong>โภชนาการ:</strong> ควรกินอาหารหลากหลายในสัดส่วนที่เหมาะสม เน้นข้าวกล้อง ผักพื้นบ้าน ผักหลากสี ปลาที่มีโอเมก้า 3 และแหล่งแคลเซียม เช่น ปลาเล็กปลาน้อยและผักใบเขียวเข้ม
-    <a href="https://www.youtube.com/watch?v=JYqUeEInPuI&t=27" class="ref" target="_blank">การส่งเสริมสุขภาพผู้สูงอายุ [00:27]</a>
-    ในมุมมองของแพทย์แผนไทย ควรเน้นการ "กินให้พอดีกับใช้" เนื่องจากระบบเผาผลาญทำงานช้าลง และหลีกเลี่ยงอาหารที่เพิ่มตะกรันในเลือด
-    <a href="https://www.youtube.com/watch?v=H2BCcrwFCic&t=630" class="ref" target="_blank">ชะลอความเสื่อมร่างกาย [10:30]</a>
-    ผู้เชี่ยวชาญด้านการฝึกยังแนะนำให้ลดน้ำตาลสังเคราะห์และให้ความสำคัญกับการเคี้ยว เพื่อกระตุ้นการหลั่งฮอร์โมนที่ช่วยให้ร่างกายทำงานได้ดี
-    <a href="https://www.youtube.com/watch?v=FD-i1wcbJ0Y&t=470" class="ref" target="_blank">Leaders Podcast Ep.23 [07:50]</a>
-  </p>
-  <p>
-    <strong>การออกกำลังกายและการเคลื่อนไหว:</strong> การออกกำลังกายเป็นสิ่งจำเป็นอย่างยิ่งสำหรับผู้สูงอายุ เพราะหากไม่ใช้งาน กล้ามเนื้อจะฝ่อและเสื่อมลง
-    <a href="https://www.youtube.com/watch?v=FD-i1wcbJ0Y&t=501" class="ref" target="_blank">Leaders Podcast Ep.23 [08:21]</a>
-    โดยควรเน้นการฝึกการทรงตัวเป็นลำดับแรก เริ่มจากการเสริมสร้างความแข็งแรงของเท้าและข้อเท้า ก่อนจะพัฒนาไปสู่การเสริมสร้างกำลังโดยรวม
-    <a href="https://www.youtube.com/watch?v=FD-i1wcbJ0Y&t=320" class="ref" target="_blank">Leaders Podcast Ep.23 [05:20]</a>
-    ผู้สูงอายุสามารถเดิน วิ่งช้าๆ กายบริหาร ว่ายน้ำ หรือรำมวยจีนได้
-    <a href="https://www.youtube.com/watch?v=JYqUeEInPuI&t=109" class="ref" target="_blank">การส่งเสริมสุขภาพผู้สูงอายุ [01:49]</a>
-    ศูนย์ฟื้นฟูผู้สูงอายุแนะนำโปรแกรมธาราบำบัดสระน้ำแร่สำหรับผู้มีปัญหาการทรงตัว โดยให้ออกกำลังกายอย่างน้อย 3 ครั้งต่อสัปดาห์ต่อเนื่องประมาณ 2 สัปดาห์ขึ้นไปเพื่อเห็นผล
-    <a href="https://www.youtube.com/watch?v=SRNUQLSysjs&t=275" class="ref" target="_blank">WELLNESS ศูนย์ส่งเสริมพฤฒพลัง มช. [04:35]</a>
-  </p>
-  <p>
-    <strong>การดูแลสุขภาพจิตและป้องกันความโดดเดี่ยว:</strong> การส่งเสริมสุขภาพจิตตามแนวทาง 5 มิติ ได้แก่ สุขสบาย สุขสนุก สุขสง่า สุขสว่าง และสุขสงบ เป็นหลักสำคัญในการดูแลผู้สูงอายุ
-    <a href="https://www.youtube.com/watch?v=JYqUeEInPuI&t=194" class="ref" target="_blank">การส่งเสริมสุขภาพผู้สูงอายุ [03:14]</a>
-    การต่อสู้กับความโดดเดี่ยวทำได้โดยการชวนผู้สูงอายุพูดคุยและใช้เวลาที่มีคุณภาพร่วมกัน ชวนทำกิจกรรมหรืองานอดิเรก สนับสนุนให้เข้าสังคม และทำให้ท่านรู้สึกมีคุณค่า
-    <a href="https://www.youtube.com/watch?v=Tr1Pr96UneY&t=524" class="ref" target="_blank">รายการศิริราชเพื่อผู้สูงอายุ [08:44]</a>
-    ด้านจิตใจในยามร่างกายเสื่อม ควรเตรียมใจยอมรับความจริง เมตตาตัวเอง มีสติอยู่กับปัจจุบัน และหากัลยาณมิตรมาคอยสนับสนุน
-    <a href="https://www.youtube.com/watch?v=H2BCcrwFCic&t=1206" class="ref" target="_blank">ชะลอความเสื่อมร่างกาย [20:06]</a>
-  </p>
-  <p>
-    <strong>การตรวจสุขภาพประจำปี:</strong> เป็นสิ่งสำคัญสำหรับผู้สูงอายุ ครอบคลุมการตรวจร่างกายภายนอก การตรวจห้องแล็บ (น้ำตาล ไขมัน ไต ตับ ความสมบูรณ์ของเม็ดเลือด) การตรวจทางรังสีวินิจฉัย เช่น เอกซเรย์ปอด อัลตราซาวด์ช่องท้อง และการวัดความหนาแน่นของมวลกระดูก รวมถึงการตรวจคลื่นไฟฟ้าหัวใจ
-    <a href="https://www.youtube.com/watch?v=44qKy01qkTw&t=55" class="ref" target="_blank">เหตุผลที่ผู้สูงอายุควรตรวจสุขภาพประจำปี [00:55]</a>
-    การตรวจสุขภาพประจำปีจะช่วยให้ทราบถึงสภาพร่างกายในส่วนที่ตนเองสังเกตได้ยาก
-    <a href="https://www.youtube.com/watch?v=H2BCcrwFCic&t=933" class="ref" target="_blank">ชะลอความเสื่อมร่างกาย [15:33]</a>
-  </p>
+<section id="section-1-4">
+  <h3>พลวัตราคาที่ดินตามทำเลและสภาวะตลาด</h3>
+  <p>ตลาดที่ดินมีความแตกต่างกันอย่างมีนัยสำคัญตามทำเล สภาวะเศรษฐกิจ และปัจจัยด้านโครงสร้างพื้นฐาน กรณีศึกษาในเชียงใหม่ชี้ให้เห็นว่าในปี 2568 ตลาดโดยรวมค่อนข้างซบเซา โดยราคาซื้อขายจริงลดลงอย่างเห็นได้ชัด แม้ราคาประกาศขายจะยังไม่ต่างจากปีก่อนมากนัก<sup><a class="ref" href="https://www.youtube.com/watch?v=zqBvJw1_XAk&t=311" title="ราคาที่ดินปี2569 โซนไหนขึ้นหรือลง? ทำไมบางแห่งลดลงถึง30% กว่าจะขายได้ [05:11]">[5]</a></sup> บางโซนอย่างสันทรายมีการปรับลดราคาลงถึง 40-50%<sup><a class="ref" href="https://www.youtube.com/watch?v=zqBvJw1_XAk&t=400" title="ราคาที่ดินปี2569 โซนไหนขึ้นหรือลง? ทำไมบางแห่งลดลงถึง30% กว่าจะขายได้ [06:40]">[5]</a></sup> ในขณะที่โซนหางดงราคาลดลงเพียงประมาณ 20%<sup><a class="ref" href="https://www.youtube.com/watch?v=zqBvJw1_XAk&t=466" title="ราคาที่ดินปี2569 โซนไหนขึ้นหรือลง? ทำไมบางแห่งลดลงถึง30% กว่าจะขายได้ [07:46]">[5]</a></sup></p>
+  <p>ปรากฏการณ์นี้สะท้อนให้เห็นว่าช่วงที่ตลาดซบเซาอาจเป็นโอกาสของผู้ซื้อ เนื่องจากผู้ขายหลายรายยอมลดราคาเพื่อระบายสต็อกหรือต้องการสภาพคล่อง<sup><a class="ref" href="https://www.youtube.com/watch?v=zqBvJw1_XAk&t=350" title="ราคาที่ดินปี2569 โซนไหนขึ้นหรือลง? ทำไมบางแห่งลดลงถึง30% กว่าจะขายได้ [05:50]">[5]</a></sup> ราคาที่นักพัฒนาโครงการยอมรับได้ก็แตกต่างกันตามประเภทโครงการ โดยนักพัฒนาโครงการบ้านหรูราคา 50-80 ล้านบาทจะซื้อที่ดินในราคาไม่เกินตารางวาละ 30,000-40,000 บาท<sup><a class="ref" href="https://www.youtube.com/watch?v=zqBvJw1_XAk&t=505" title="ราคาที่ดินปี2569 โซนไหนขึ้นหรือลง? ทำไมบางแห่งลดลงถึง30% กว่าจะขายได้ [08:25]">[5]</a></sup></p>
 </section>
 
-<section id="section-5">
-  <h2>5. ศูนย์ Wellness และรูปแบบการให้บริการสุขภาพในประเทศไทย</h2>
-  <p>
-    ศูนย์ Wellness ในประเทศไทยมีรูปแบบที่หลากหลาย ตั้งแต่คลินิกเฉพาะทาง ศูนย์ฟื้นฟูผู้ป่วย ไปจนถึง Wellness Retreat ระดับหรู แต่ทุกรูปแบบล้วนมีเป้าหมายร่วมกันคือการดูแลสุขภาพเชิงป้องกันและองค์รวม
-  </p>
-  <p>
-    <strong>Wellness Clinic:</strong> LifePlus Wellness Clinic จังหวัดระยอง เป็นตัวอย่างของคลินิกที่เน้นการตรวจเชิงลึก เช่น การตรวจฮอร์โมนและแร่ธาตุ เพื่อนำข้อมูลมาวางแผนการรักษาร่วมกับทีมแพทย์
-    <a href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=297" class="ref" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก [04:57]</a>
-    มีเป้าหมายให้ทุกคน "Live Longer, Better, and Happier"
-    <a href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=368" class="ref" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก [06:08]</a>
-  </p>
-  <p>
-    <strong>Wellness Retreat ระดับหรู:</strong> RAKxa Wellness ในพื้นที่คุ้งบางกะเจ้า ขนาดประมาณ 200 ไร่ นิยามตัวเองว่าเป็น "Wellness Retreat" ที่รวมการรักษาสุขภาพและการพักผ่อนเข้าด้วยกัน
-    <a href="https://www.youtube.com/watch?v=Ug8uddIfcM8&t=150" class="ref" target="_blank">RAKxa Wellness [02:30]</a>
-    ให้บริการผ่าน 3 แขนงหลัก ได้แก่ RAKxa GAYA (Medical Gym) RAKxa JAI (Holistic Wellness Center ที่รวมศาสตร์แพทย์แผนไทย จีน อินเดีย อายุรเวท) และ VitalLife Scientific Wellness Clinic ที่ร่วมมือกับโรงพยาบาลบำรุงราษฎร์
-    <a href="https://www.youtube.com/watch?v=Ug8uddIfcM8&t=261" class="ref" target="_blank">RAKxa Wellness [04:21]</a>
-    ด้วยค่าบริการพัก 2 วัน 1 คืน เริ่มต้นที่ 60,000 บาท สะท้อนให้เห็นว่าสุขภาพที่ดีสามารถเข้าถึงได้ด้วยการลงทุน
-    <a href="https://www.youtube.com/watch?v=Ug8uddIfcM8&t=27" class="ref" target="_blank">RAKxa Wellness [00:27]</a>
-  </p>
-  <p>
-    <strong>Destination Spa:</strong> THANN Wellness Destination จังหวัดพระนครศรีอยุธยา ซึ่งใช้งบลงทุนกว่า 700 ล้านบาท เป็นตัวอย่างของ Destination Spa ที่ไม่ใช่ธุรกิจโรงแรม แต่บริหารโดยทีมสปาเพื่อมุ่งเน้นการดูแลสุขภาพกายและอารมณ์ของลูกค้า
-    <a href="https://www.youtube.com/watch?v=h8JZwLkUgkA&t=1020" class="ref" target="_blank">THANN Wellness Destination [17:00]</a>
-    มีออนเซ็น 3 บ่อ 3 อุณหภูมิ และอาหารที่ออกแบบเพื่อฟังก์ชันสุขภาพ
-    <a href="https://www.youtube.com/watch?v=h8JZwLkUgkA&t=1064" class="ref" target="_blank">THANN Wellness Destination [17:44]</a>
-  </p>
-  <p>
-    <strong>ศูนย์ดูแลสุขภาพผู้สูงวัยเฉพาะทาง:</strong> Chersery Home International "บ้านธรรมชาติ" ในซอยแบริ่ง เน้นการฟื้นฟูสมรรถภาพให้ผู้สูงวัยกลับไปใช้ชีวิตที่บ้านได้เร็วที่สุดและปลอดภัย ไม่ใช่สถานที่พักอาศัยถาวร
-    <a href="https://www.youtube.com/watch?v=QWvA_W3J5SE&t=90" class="ref" target="_blank">เยี่ยมชมบ้านธรรมชาติ [01:30]</a>
-    ออกแบบตามหลัก Universal Design มีห้องกิจกรรม Day Care และกิจกรรมกระตุ้นสมอง
-    <a href="https://www.youtube.com/watch?v=QWvA_W3J5SE&t=228" class="ref" target="_blank">เยี่ยมชมบ้านธรรมชาติ [03:48]</a>
-    ขณะที่ Niji Village Nursing Home เน้นการฟื้นฟูผู้ป่วยโรคหลอดเลือดสมองด้วยเทคโนโลยีทันสมัย เช่น การกระตุ้นแม่เหล็กไฟฟ้า TMS และหุ่นยนต์ฝึกมือ
-    <a href="https://www.youtube.com/watch?v=oiVdMBBu22A&t=153" class="ref" target="_blank">ดูแลผู้สูงอายุฟื้นฟูผู้ป่วยโรคหลอดเลือดสมอง [02:33]</a>
-  </p>
-  <p>
-    <strong>ศูนย์วิชาการด้านผู้สูงอายุ:</strong> ศูนย์ส่งเสริมพฤฒพลังผู้สูงอายุ มหาวิทยาลัยเชียงใหม่ ให้บริการแบบครบวงจร ทั้งคลินิกเวชกรรม โปรแกรมธาราบำบัด คลาสออกกำลังกาย Fit & Fun บริการนวดสวนดอกที่ผสมผสานเทคนิคล้านนา จีน และไทย
-    <a href="https://www.youtube.com/watch?v=SRNUQLSysjs&t=460" class="ref" target="_blank">WELLNESS ศูนย์ส่งเสริมพฤฒพลัง มช. [07:40]</a>
-    รวมถึงร้านยาสมุนไพรและคลินิกทันตกรรม ซึ่งได้รับการรับรองมาตรฐานการท่องเที่ยวเชิงสุขภาพ
-    <a href="https://www.youtube.com/watch?v=SRNUQLSysjs&t=730" class="ref" target="_blank">WELLNESS ศูนย์ส่งเสริมพฤฒพลัง มช. [12:10]</a>
-  </p>
+<section id="section-1-5">
+  <h3>ศักยภาพและปัจจัยขับเคลื่อนการพัฒนานนทบุรี/ปทุมธานี</h3>
+  <p>นนทบุรีโดดเด่นในกลุ่มจังหวัดปริมณฑลด้วยความใกล้ชิดกับใจกลางกรุงเทพฯ มากที่สุด โดยพื้นที่อย่างจตุจักร บางซื่อ และเกษตร-งามวงศ์วาน เป็นเพียงแค่ข้ามสะพานก็เข้าถึงได้<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=54" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [00:54]">[6]</a></sup> การพัฒนาเมืองมักเริ่มจากแหล่งงานและขยายออกสู่พื้นที่รอบนอกเมื่อใจกลางเมืองอิ่มตัว<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=78" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [01:18]">[6]</a></sup> นนทบุรีจึงกลายเป็นเหมือน "กรุงเทพฯ ย่อมๆ" ที่มีสิ่งอำนวยความสะดวกครบครัน รวมถึงรถไฟฟ้าสายสีม่วง ศูนย์การค้าขนาดใหญ่อย่างเซ็นทรัลเวสต์เกต และถนนราชพฤกษ์ที่เป็นเส้นทางวงแหวนสำคัญ<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=492" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [08:12]">[6]</a></sup></p>
+  <p>ปัจจัยสำคัญที่ดึงดูดผู้อยู่อาศัยได้แก่ แหล่งงาน โรงเรียน และไลฟ์สไตล์<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=280" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [04:40]">[6]</a></sup> หลายบริษัทเลือกตั้งสำนักงานใหญ่ในนนทบุรี โดยเฉพาะธุรกิจที่ไม่จำเป็นต้องอยู่ในใจกลางเมือง<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=575" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [09:35]">[6]</a></sup> ในมุมมองของนักลงทุน นนทบุรียังมีที่ดินเหลือพัฒนาอีกมาก โดยเฉพาะตามแนวถนนราชพฤกษ์ และยังคงมีศักยภาพในระยะยาว<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=791" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [13:11]">[6]</a></sup> สำหรับปทุมธานี รังสิตกลายเป็นศูนย์กลางสำคัญด้วยห้างสรรพสินค้าขนาดใหญ่ แหล่งงาน และมหาวิทยาลัยจำนวนมากตามแนวคลองต่าง ๆ<sup><a class="ref" href="https://www.youtube.com/watch?v=SD9okU1zbnc&t=647" title="จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร?? [10:47]">[6]</a></sup></p>
+  <p>ในมุมมองของผังเมืองนนทบุรีปี 2569 นนทบุรีได้รับการยืนยันว่ามีโครงข่ายรถไฟฟ้าถึง 3 สาย (สีม่วง สีชมพู สีน้ำตาล) มอเตอร์เวย์ M81 บางใหญ่-กาญจนบุรี ถนนราชพฤกษ์ตัดใหม่ รวมถึงศูนย์การค้าขนาดใหญ่ โรงเรียนนานาชาติ และโรงพยาบาล ทำให้เป็นตลาดอสังหาริมทรัพย์ใหญ่เป็นอันดับ 3 ของประเทศ<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=478" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [07:58]">[7]</a></sup></p>
 </section>
 
-<section id="section-6">
-  <h2>6. การท่องเที่ยวเชิงสุขภาพและโอกาสทางธุรกิจ Wellness</h2>
-  <p>
-    ประเทศไทยได้รับการยอมรับในฐานะ Medical Hub และ Wellness Hub ที่สำคัญของโลก
-    <a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=97" class="ref" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย [01:37]</a>
-    ปัจจุบันมีสถานบริการ Wellness ทั่วประเทศกว่า 50,000 แห่ง
-    <a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=277" class="ref" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย [04:37]</a>
-    โดยการท่องเที่ยวเชิงสุขภาพเป็นหนึ่งในโอกาสสำคัญในการกระตุ้นเศรษฐกิจผ่านศาสตร์การแพทย์แผนไทย
-    <a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=122" class="ref" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย [02:02]</a>
-  </p>
-  <p>
-    การท่องเที่ยวเชิงสุขภาพสำหรับผู้สูงอายุเป็นตลาดที่กำลังเติบโต โดยกิจกรรมอย่าง "การอาบป่า" (Forest Bathing) ที่มีต้นกำเนิดจากญี่ปุ่นปี พ.ศ. 2525 ช่วยลดความเครียดและเชื่อมโยงมนุษย์กับธรรมชาติ
-    <a href="https://www.youtube.com/watch?v=I8_kAWCaYpw&t=104" class="ref" target="_blank">อาบป่า สปาเกลือ ท่องเที่ยวสุขภาพเพื่อผู้สูงอายุ [01:44]</a>
-    ผ่านสาร "ไฟตอนไซด์" ที่ต้นไม้ปล่อยออกมา ซึ่งช่วยเสริมสร้างไมโทคอนเดรียทำให้เซลล์แข็งแรงขึ้น
-    <a href="https://www.youtube.com/watch?v=I8_kAWCaYpw&t=313" class="ref" target="_blank">อาบป่า สปาเกลือ ท่องเที่ยวสุขภาพเพื่อผู้สูงอายุ [05:13]</a>
-    นอกจากนี้ สปาเกลือยังเป็นกิจกรรมที่ช่วยชะลอวัยและฟื้นฟูเซลล์
-    <a href="https://www.youtube.com/watch?v=I8_kAWCaYpw&t=495" class="ref" target="_blank">อาบป่า สปาเกลือ ท่องเที่ยวสุขภาพเพื่อผู้สูงอายุ [08:15]</a>
-  </p>
-  <p>
-    สำหรับโอกาสทางธุรกิจ Wellness ที่กำลังเติบโต รายงานของ WEF และข้อมูลตลาดชี้ให้เห็นเทรนด์สำคัญ 5 ประการ ได้แก่ (1) Micro-Adventures & Local Escapism ที่ผู้คนอยากไปเที่ยวธรรมชาติใกล้เมืองเพื่อพักผ่อน
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1696" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [28:16]</a>
-    (2) Wellness as Community and Culture ที่การออกกำลังกายกลายเป็นกิจกรรมทางสังคม
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2040" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [34:00]</a>
-    (3) Nutrition as Prevention ที่คนมองอาหารเป็นยาป้องกันโรค
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2229" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [37:09]</a>
-    (4) Quiet Mornings & Sunrise Rituals ที่ให้ความสำคัญกับกิจวัตรยามเช้า
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2300" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [38:20]</a>
-    และ (5) Men's Wellness Revolution ที่ผู้ชายหันมาใส่ใจสุขภาพมากขึ้น
-    <a href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2400" class="ref" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ [40:00]</a>
-    กรณีศึกษาของแบรนด์ THANN แสดงให้เห็นว่า Wellness จะเป็นหนึ่งในเทรนด์สำคัญที่จะขยายตลาดอย่างมีนัยสำคัญในอนาคต
-    <a href="https://www.youtube.com/watch?v=h8JZwLkUgkA&t=1948" class="ref" target="_blank">THANN Wellness Destination [32:28]</a>
-  </p>
+<section id="section-1-6">
+  <h3>ผังเมืองและผลกระทบต่อการพัฒนาอสังหาริมทรัพย์</h3>
+  <p>ผังเมืองมีบทบาทสำคัญในการกำหนดทิศทางการพัฒนา ผังเมืองนนทบุรีฉบับก่อนหน้าออกมาตั้งแต่ปี 2548 ซึ่งเก่าแก่เกือบ 20 ปี ทั้งที่ปกติผังเมืองมีอายุเพียง 5-7 ปี<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=118" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [01:58]">[7]</a></sup> ผังเมืองใหม่ปี 2566 กำหนดข้อจำกัดสำคัญ เช่น ห้ามสร้างคอนโดมิเนียมสูงเกิน 23 เมตร และถนนสำหรับโครงการจัดสรรต้องกว้างกว่า 12 เมตร<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=189" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [03:09]">[7]</a></sup></p>
+  <p>ข้อจำกัดเหล่านี้สร้างปัญหาอย่างมาก เนื่องจากถนนส่วนใหญ่ในนนทบุรีมีขนาดเล็กกว่า 12 เมตร ทำให้ผังเมืองใหม่นี้ "ปิดตาย" โครงการจัดสรรที่อยู่อาศัยกว่าครึ่งจังหวัด<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=277" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [04:37]">[7]</a></sup> ราคาที่ดินที่แพงขึ้นจากรถไฟฟ้าหลายสาย ประกอบกับข้อจำกัดการสร้างอาคารสูง ทำให้การพัฒนาอสังหาริมทรัพย์ทำได้ยากขึ้นอย่างมีนัยสำคัญ<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=305" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [05:05]">[7]</a></sup> นักพัฒนาอสังหาริมทรัพย์มองว่าผังเมืองใหม่นี้เป็น "แอปเปิลพิษ" ที่อาจทำให้เมืองแย่ลงแทนที่จะน่าอยู่ขึ้น<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=556" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [09:16]">[7]</a></sup> การที่กฎเกณฑ์ผังเมืองแตกต่างกันอย่างมากระหว่างจังหวัดที่อยู่ติดกันยังก่อให้เกิดความไม่เป็นธรรม<sup><a class="ref" href="https://www.youtube.com/watch?v=H8o20Fn6T64&t=241" title="ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา [04:01]">[7]</a></sup></p>
 </section>
 
-<section id="section-7">
-  <h2>7. ราคาที่ดินและการลงทุนในอสังหาริมทรัพย์</h2>
-  <p>
-    ที่ดินเป็นสินทรัพย์ที่หลายคนนิยมซื้อสะสม เนื่องจากมีแนวโน้มมูลค่าสูงขึ้นในระยะยาวและสามารถเอาชนะเงินเฟ้อได้
-    <a href="https://www.youtube.com/watch?v=pTVRothbGJo&t=11" class="ref" target="_blank">หลักคิดก่อนตัดสินใจซื้อที่ดิน [00:11]</a>
-    อย่างไรก็ตาม ที่ดินเป็นทรัพย์สินที่มีสภาพคล่องต่ำ ทำให้การเปลี่ยนเป็นเงินสดเมื่อจำเป็นทำได้ยาก ดังนั้นผู้ที่คิดจะซื้อควรมีวัตถุประสงค์ที่ชัดเจน เช่น สร้างบ้านพักหลังเกษียณหรือเก็งกำไร
-    <a href="https://www.youtube.com/watch?v=pTVRothbGJo&t=100" class="ref" target="_blank">หลักคิดก่อนตัดสินใจซื้อที่ดิน [01:40]</a>
-    นอกจากนี้ ควรพิจารณาศักยภาพของที่ดินให้สอดคล้องกับวัตถุประสงค์ เช่น หากจะทำเกษตรต้องดูดินและน้ำ หากจะสร้างอพาร์ตเมนต์ต้องอยู่ใกล้แหล่งงานหรือมหาวิทยาลัย และรูปทรงที่ดินควรเป็นสี่เหลี่ยมเพื่อให้ใช้งานและซื้อขายได้ง่าย
-    <a href="https://www.youtube.com/watch?v=pTVRothbGJo&t=200" class="ref" target="_blank">หลักคิดก่อนตัดสินใจซื้อที่ดิน [03:20]</a>
-  </p>
-  <p>
-    ในการซื้อขายที่ดิน จะมีราคาที่เข้ามามีบทบาทสำคัญ 4 ประเภท ได้แก่ <strong>ราคาประเมินจากกรมธนารักษ์</strong> ซึ่งเป็นราคาที่ภาครัฐสำรวจและกำหนดขึ้นเพื่อใช้ในการทำนิติกรรมและคำนวณค่าโอน
-    <a href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=64" class="ref" target="_blank">ราคาประเมินที่ดินมีกี่ประเภท [01:04]</a>
-    <strong>ราคาประเมินจากภาคเอกชนหรือธนาคาร</strong> ซึ่งธนาคารจะส่งเจ้าหน้าที่ประเมินและนำมาอ้างอิงในการปล่อยสินเชื่อ
-    <a href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=257" class="ref" target="_blank">ราคาประเมินที่ดินมีกี่ประเภท [04:17]</a>
-    <strong>ราคาท้องตลาด</strong> ซึ่งเป็นราคาที่ใช้อ้างอิงว่าทำเลนั้นๆ ควรมีราคาเท่าไร
-    <a href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=82" class="ref" target="_blank">ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน [01:22]</a>
-    และ <strong>ราคาซื้อขายจริง</strong> ที่ขึ้นอยู่กับการตกลงกันระหว่างผู้ซื้อและผู้ขาย
-    <a href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=134" class="ref" target="_blank">ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน [02:14]</a>
-  </p>
-  <p>
-    ความแตกต่างระหว่างราคาประเภทต่างๆ มีนัยสำคัญ โดยราคาประเมินจากภาคเอกชนและราคาท้องตลาดมักสูงกว่าราคาประเมินจากกรมธนารักษ์ประมาณ 20-40%
-    <a href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=386" class="ref" target="_blank">ราคาประเมินที่ดินมีกี่ประเภท [06:26]</a>
-    ตัวอย่างที่ชัดเจนคือทำเลบริเวณรถไฟฟ้าศูนย์วัฒนธรรมฯ ซึ่งราคาซื้อขายจริงอยู่ที่ 1,100,000 บาทต่อตารางวา แต่ราคาประเมินราชการอยู่ที่ประมาณ 280,000 บาทต่อตารางวาเท่านั้น
-    <a href="https://www.youtube.com/watch?v=-6fMeqnwT9I&t=290" class="ref" target="_blank">ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน [04:50]</a>
-  </p>
-  <p>
-    ค่าใช้จ่ายในการโอนกรรมสิทธิ์ประกอบด้วย ค่าธรรมเนียมการโอน 2% ของราคาประเมินกรมธนารักษ์ อากรแสตมป์ 0.5% ภาษีธุรกิจเฉพาะ 3.3% (สำหรับการถือครองไม่เกิน 5 ปี) และภาษีเงินได้แบบขั้นบันได โดยทั่วไปจะแบ่งค่าโอนกันคนละครึ่ง
-    <a href="https://www.youtube.com/watch?v=RQy3eLsg1eg&t=456" class="ref" target="_blank">ราคาประเมินที่ดินมีกี่ประเภท [07:36]</a>
-    สำหรับที่ดิน ส.ป.ก. ที่เปลี่ยนเป็นโฉนดเพื่อการเกษตร ราคาจะอ้างอิงจากราคาประเมินของกรมธนารักษ์เช่นกัน และสามารถนำไปใช้เป็นหลักทรัพย์ค้ำประกันสินเชื่อได้เต็มวงเงิน 100%
-    <a href="https://www.youtube.com/watch?v=ZtEKOYusqZs&t=265" class="ref" target="_blank">เช็คราคาโฉนดที่ดิน สปก4-01 [04:25]</a>
-  </p>
+<section id="section-1-7">
+  <h3>โฉนด ส.ป.ก. และมิติการถือครองที่ดินเพื่อเกษตรกรรม</h3>
+  <p>โครงการเปลี่ยนหนังสืออนุญาต ส.ป.ก. 4-01 เป็นโฉนดเพื่อการเกษตรได้เริ่ม Kick-off ในวันที่ 15 มกราคม 2567 ครอบคลุม 72 จังหวัด ยกเว้น 5 จังหวัดที่ไม่มีที่ดิน ส.ป.ก. ได้แก่ สมุทรปราการ สมุทรสงคราม สมุทรสาคร กรุงเทพมหานคร และนนทบุรี<sup><a class="ref" href="https://www.youtube.com/watch?v=ZtEKOYusqZs&t=105" title="เช็คราคาโฉนดที่ดิน สปก4-01 และโฉนดที่ทั่วไป [01:45]">[2]</a></sup> โครงการนี้มีเป้าหมายมอบโฉนดให้เกษตรกร 1.6 ล้านคน ครอบคลุมพื้นที่ประมาณ 22 ล้านไร่<sup><a class="ref" href="https://www.youtube.com/watch?v=ZtEKOYusqZs&t=110" title="เช็คราคาโฉนดที่ดิน สปก4-01 และโฉนดที่ทั่วไป [01:50]">[2]</a></sup></p>
+  <p>ไฮไลต์สำคัญของโฉนด ส.ป.ก. คือการที่เกษตรกรสามารถนำไปเป็นหลักทรัพย์ค้ำประกันสินเชื่อได้ โดยใช้ราคาประเมินเดียวกับกรมธนารักษ์<sup><a class="ref" href="https://www.youtube.com/watch?v=ZtEKOYusqZs&t=265" title="เช็คราคาโฉนดที่ดิน สปก4-01 และโฉนดที่ทั่วไป [04:25]">[2]</a></sup> นอกจากนี้ยังส่งเสริมการปลูกไม้มีค่าที่สามารถใช้ค้ำประกันสินเชื่อและขายคาร์บอนเครดิตได้<sup><a class="ref" href="https://www.youtube.com/watch?v=ZtEKOYusqZs&t=210" title="เช็คราคาโฉนดที่ดิน สปก4-01 และโฉนดที่ทั่วไป [03:30]">[2]</a></sup> สำหรับการตรวจสอบราคา โฉนด ส.ป.ก. ใช้ราคาเดียวกับราคาประเมินที่ดินของกรมธนารักษ์ และในอนาคตอาจพัฒนาให้ตรวจสอบผ่านระบบออนไลน์ได้เช่นเดียวกับที่ดินทั่วไป<sup><a class="ref" href="https://www.youtube.com/watch?v=ZtEKOYusqZs&t=306" title="เช็คราคาโฉนดที่ดิน สปก4-01 และโฉนดที่ทั่วไป [05:06]">[2]</a></sup></p>
 </section>
 
-<section id="references">
-  <h2>แหล่งอ้างอิง</h2>
-  <ol>
-    <li><a href="https://www.youtube.com/watch?v=pTVRothbGJo" target="_blank">หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ
+<div class="topic-header" id="topic-2"><h2>Wellness: แนวคิด บริการ และเศรษฐกิจสุขภาพ</h2></div>
+
+<section id="section-2-1">
+  <h3>นิยามและแนวคิดของ Wellness</h3>
+  <p>คำว่า "Wellness" หมายถึงความอยู่ดีมีสุข การมีสุขภาพที่แข็งแรงสมบูรณ์เต็มร้อย เพื่อใช้ชีวิตได้อย่างที่ใจต้องการ และมีชีวิตหลังเกษียณที่สมบูรณ์แบบ<sup><a class="ref" href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=157" title="รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง [02:37]">[8]</a></sup> แนวคิดหลักของ Wellness คือการดูแลสุขภาพเชิงป้องกัน ซึ่งแตกต่างจากการแพทย์กระแสหลักที่มักรักษาเมื่อเกิดโรคแล้ว<sup><a class="ref" href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=103" title="รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง [01:43]">[8]</a></sup> โดยมุ่งเน้นการวิเคราะห์ ป้องกัน และตรวจพบความผิดปกติก่อนที่จะกลายเป็นโรคที่ต้องรักษาในโรงพยาบาล<sup><a class="ref" href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=58" title="รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง [00:58]">[8]</a></sup></p>
+  <p>ผู้ที่เข้ามาใช้บริการ Wellness แบ่งออกเป็นสองกลุ่มหลัก ได้แก่ กลุ่มที่มีสุขภาพดีอยู่แล้วและต้องการดูแลเพื่อป้องกัน<sup><a class="ref" href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=197" title="รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง [03:17]">[8]</a></sup> และกลุ่มที่มีอาการเรื้อรัง เช่น นอนไม่หลับ ท้องผูก หรือปัญหาสมรรถภาพ ซึ่ง Wellness สามารถช่วยให้อาการดีขึ้นและลดความเสี่ยงโรคในอนาคต<sup><a class="ref" href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=221" title="รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง [03:41]">[8]</a></sup> ศาสตร์ Anti-Aging หรือการชะลอวัยเป็นแกนหลักสำคัญของ Wellness โดยมีการตรวจในเชิงลึก เช่น ฮอร์โมนและแร่ธาตุ เพื่อนำข้อมูลมาวางแผนการดูแลสุขภาพองค์รวม<sup><a class="ref" href="https://www.youtube.com/watch?v=ycccnl6CyHM&t=297" title="รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง [04:57]">[8]</a></sup></p>
+  <p>ในระดับนโยบาย กรมการแพทย์แผนไทยและการแพทย์ทางเลือกได้พัฒนา "ศูนย์เวลเนส" ใน 5 ประเภทบริการ และผลักดันอัตลักษณ์ไทย (Thainess Wellness Destination: TWD) เพื่อให้ประเทศไทยเป็น Medical Hub และ Wellness Hub ระดับโลก<sup><a class="ref" href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=82" title="ศูนย์เวลเนสอัตลักษณ์ไทย • Thainess Wellness Destination [01:22]">[9]</a></sup> โดยอาศัยศาสตร์การแพทย์แผนไทย อาหารไทย และสมุนไพรไทยเป็นจุดขาย<sup><a class="ref" href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=111" title="ศูนย์เวลเนสอัตลักษณ์ไทย • Thainess Wellness Destination [01:51]">[9]</a></sup> ปัจจุบันมีสถานบริการ Wellness ทั่วประเทศกว่า 50,000 แห่ง<sup><a class="ref" href="https://www.youtube.com/watch?v=tDEAmXB_9Bg&t=277" title="ศูนย์เวลเนสอัตลักษณ์ไทย • Thainess Wellness Destination [04:37]">[9]</a></sup></p>
+</section>
+
+<section id="section-2-2">
+  <h3>เทรนด์ Wellness และ Longevity Economy</h3>
+  <p>กิจกรรมด้านสุขภาพอย่าง Ice Bath, โยคะ, พิลาทิส และ Run Club กำลังเติบโตอย่างรวดเร็ว โดยเฉพาะในกลุ่ม Gen Z ที่หันมาสนใจการดูแลสุขภาพแทนการดื่มแอลกอฮอล์<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=10" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [00:10]">[13]</a></sup> รายงานของ World Economic Forum ในชื่อ "Future-Proofing the Longevity Economy" ชี้ว่าสังคมสูงวัยไม่ใช่ภาระ แต่เป็นโอกาสทางเศรษฐกิจที่เรียกว่า Longevity Economy<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=43" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [00:43]">[13]</a></sup> โดยคาดว่าจำนวนผู้สูงอายุ 65 ปีขึ้นไปจะมากกว่าเด็กอายุต่ำกว่า 18 ปีทั่วโลกภายในปี 2080<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=70" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [01:10]">[13]</a></sup></p>
+  <p>สำหรับประเทศไทย เราได้เข้าสู่สังคมสูงวัยอย่างสมบูรณ์แล้วในปี 2565 และอีกไม่เกิน 15 ปีข้างหน้าจะเข้าสู่ Super Aged Society<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1069" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [17:49]">[13]</a></sup> ซึ่งเป็นความท้าทายอย่างมากเนื่องจากแรงงานนอกระบบสูงถึง 50% และมีเพียง 1 ใน 3 ของแรงงานไทยที่อยู่ในระบบประกันสังคม<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1104" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [18:24]">[13]</a></sup></p>
+  <p>เทรนด์ Wellness ที่เป็นโอกาสทางธุรกิจมี 5 กระแสหลัก ได้แก่ Micro-Adventures & Local Escapism การออกไปสัมผัสธรรมชาติใกล้เมือง<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=1696" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [28:16]">[13]</a></sup> Wellness as Community and Culture การออกกำลังกายเพื่อเข้าสังคม<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2040" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [34:00]">[13]</a></sup> Nutrition as Prevention การมองอาหารเป็นยาป้องกันโรค<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2229" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [37:09]">[13]</a></sup> Quiet Mornings & Sunrise Rituals พิธีกรรมยามเช้าเพื่อสุขภาพ<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2300" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [38:20]">[13]</a></sup> และ Men's Wellness Revolution การที่ผู้ชายหันมาดูแลสุขภาพและแสดงออกทางอารมณ์มากขึ้น<sup><a class="ref" href="https://www.youtube.com/watch?v=jEbuPGOK4pA&t=2400" title="เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545 [40:00]">[13]</a></sup></p>
+</section>
+
+<section id="section-2-3">
+  <h3>ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุ</h3>
+  <p>ผู้สูงอายุ (อายุ 60 ปีขึ้นไป) เผชิญกับปัญหาสุขภาพ 6 ประเด็นหลักที่พบบ่อยในยุคปัจจุบัน ได้แก่ ภาวะสมองเสื่อมหรือโรคอัลไซเมอร์ ที่มาพร้อมกับปัญหาความจำระยะสั้น ความรู้สึกโดดเดี่ยว และซึมเศร้า<sup><a class="ref" href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=53" title="6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness [00:53]">[12]</a></sup> การนอนไม่หลับอันเนื่องมาจากการผลิตเมลาโทนินลดลงและฮอร์โมนผิดปกติ<sup><a class="ref" href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=106" title="6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness [01:46]">[12]</a></sup> ปัญหากระดูกและกล้ามเนื้อ รวมถึงภาวะ Sarcopenia หรือกล้ามเนื้อลดลง<sup><a class="ref" href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=152" title="6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness [02:32]">[12]</a></sup> ภาวะทุพโภชนาการจากการย่อยอาหารและการบดเคี้ยวที่ไม่ดี<sup><a class="ref" href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=203" title="6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness [03:23]">[12]</a></sup> ปัญหาระบบขับถ่ายและการกลั้นปัสสาวะ<sup><a class="ref" href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=271" title="6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness [04:31]">[12]</a></sup> และกลุ่มโรคเรื้อรัง เช่น เบาหวาน ความดันสูง ไขมันในเลือดสูง รวมถึงความเสี่ยงจากการใช้ยาหลายชนิดพร้อมกัน<sup><a class="ref" href="https://www.youtube.com/watch?v=rSnqHy7X4mc&t=318" title="6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness [05:18]">[12]</a></sup></p>
+  <p>ในมิติจิตใจและสังคม ความโดดเดี่ยวเป็นปัญหาสำคัญในผู้สูงอายุ มีสาเหตุจากการสูญเสียเครือข่ายสังคมหลังเกษียณ ลูกหลานที่ออกไปทำงาน การเปลี่ยนแปลงบทบาท และการพลัดพรากจากบุคคลอันเป็นที่รัก<sup><a class="ref" href="https://www.youtube.com/
+<section id="references"><h2>แหล่งอ้างอิง</h2>
+<h4 style="margin-top:16px;color:var(--primary);">ที่ดินนนทบุรี/ปทุมธานี</h4>
+<ol start="1">
+<li value="1"><a href="https://www.youtube.com/watch?v=pTVRothbGJo" target="_blank">หลักคิดก่อนตัดสินใจซื้อที่ดิน เจอที่ดินราคาถูก อยากซื้อเก็บไว้ ควรดูอะไรบ้าง ? [ Money Q &amp; A ]</a> — ช่อง: THE MONEY COACH, เผยแพร่: Sat Mar 23 2024 00:00:00 GMT+0700 (Indochina Time), วิว: 91566, ความยาว: Sat Dec 30 1899 05:39:00 GMT+0642 (Indochina Time)</li>
+<li value="2"><a href="https://www.youtube.com/watch?v=ZtEKOYusqZs" target="_blank">เช็คราคาโฉนดที่ดิน สปก4-01 และโฉนดที่ทั่วไป</a> — ช่อง: often channel, เผยแพร่: Tue Jan 16 2024 00:00:00 GMT+0700 (Indochina Time), วิว: 2703, ความยาว: Sat Dec 30 1899 05:49:00 GMT+0642 (Indochina Time)</li>
+<li value="3"><a href="https://www.youtube.com/watch?v=RQy3eLsg1eg" target="_blank">ราคาประเมินที่ดินมีกี่ประเภท | Koy My Property Pro</a> — ช่อง: My Property Pro, เผยแพร่: Thu Sep 02 2021 00:00:00 GMT+0700 (Indochina Time), วิว: 18382, ความยาว: Sat Dec 30 1899 10:23:00 GMT+0642 (Indochina Time)</li>
+<li value="4"><a href="https://www.youtube.com/watch?v=-6fMeqnwT9I" target="_blank">ราคาตลาด ราคาประเมิน ราคาซื้อขายที่ดิน ต่างกันอย่างไร เปรียบเทียบชัดๆ ราคาต่างกันมาก!</a> — ช่อง: Feasy Online, เผยแพร่: Mon Oct 25 2021 00:00:00 GMT+0700 (Indochina Time), วิว: 20857, ความยาว: Sat Dec 30 1899 06:04:00 GMT+0642 (Indochina Time)</li>
+<li value="5"><a href="https://www.youtube.com/watch?v=zqBvJw1_XAk" target="_blank">ราคาที่ดินปี2569 โซนไหนขึ้นหรือลง? ทำไมบางแห่งลดลงถึง30% กว่าจะขายได้</a> — ช่อง: ChiangMai Love Home, เผยแพร่: Sun Jan 25 2026 00:00:00 GMT+0700 (Indochina Time), วิว: 11834, ความยาว: Sat Dec 30 1899 17:06:00 GMT+0642 (Indochina Time)</li>
+<li value="6"><a href="https://www.youtube.com/watch?v=SD9okU1zbnc" target="_blank">จุดเปลี่ยน หรือ จุดจบ? ดราม่าผังเมืองนนทบุรี ตอกฝาโลงจัดสรรครึ่งจังหวัด ทำเพื่ออะไร??</a> — ช่อง: Property Expert Live, เผยแพร่: Sat Oct 28 2023 00:00:00 GMT+0700 (Indochina Time), วิว: 51576, ความยาว: Sat Dec 30 1899 11:41:00 GMT+0642 (Indochina Time)</li>
+<li value="7"><a href="https://www.youtube.com/watch?v=H8o20Fn6T64" target="_blank">ผังเมืองใหม่กรุงเทพฯ ปี 69 เปลี่ยนอะไรบ้าง? ทำไม 9 ทำเลนี้ต้องจับตา</a> — ช่อง: คิดเรื่องอยู่ ThinkofLiving, เผยแพร่: Sun May 24 2026 00:00:00 GMT+0700 (Indochina Time), วิว: 94850, ความยาว: Sat Dec 30 1899 07:52:00 GMT+0642 (Indochina Time)</li>
+</ol>
+<h4 style="margin-top:16px;color:var(--primary);">wellness</h4>
+<ol start="8">
+<li value="8"><a href="https://www.youtube.com/watch?v=ycccnl6CyHM" target="_blank">รู้จักไลฟ์พลัส เวลเนส คลินิก ศูนย์สุขภาพ Wellness แห่งแรกในจังหวัดระยอง</a> — ช่อง: LifePlus WellnessClinic, เผยแพร่: Mon Nov 01 2021 00:00:00 GMT+0700 (Indochina Time), วิว: 747, ความยาว: Sat Dec 30 1899 06:22:00 GMT+0642 (Indochina Time)</li>
+<li value="9"><a href="https://www.youtube.com/watch?v=tDEAmXB_9Bg" target="_blank">ศูนย์เวลเนสอัตลักษณ์ไทย • Thainess Wellness Destination</a> — ช่อง: สถาบันการแพทย์ทางเลือก, เผยแพร่: Tue Oct 03 2023 00:00:00 GMT+0700 (Indochina Time), วิว: 586, ความยาว: Sat Dec 30 1899 06:06:00 GMT+0642 (Indochina Time)</li>
+<li value="10"><a href="https://www.youtube.com/watch?v=Ug8uddIfcM8" target="_blank">RAKxa Wellness สุดยอดแห่งสปา ‘สุขภาพที่ใช้เงินซื้อได้’ แห่งโค้งบางกระเจ้า</a> — ช่อง: BoomTharis, เผยแพร่: Wed Sep 29 2021 00:00:00 GMT+0700 (Indochina Time), วิว: 176856, ความยาว: Sat Dec 30 1899 12:23:00 GMT+0642 (Indochina Time)</li>
+<li value="11"><a href="https://www.youtube.com/watch?v=h8JZwLkUgkA" target="_blank">THANN Wellness Destination พาทัวร์อาณาจักรสปา 700 ล้าน | The Secret Sauce EP.521</a> — ช่อง: THE SECRET SAUCE, เผยแพร่: Sat Apr 23 2022 00:00:00 GMT+0700 (Indochina Time), วิว: 113894, ความยาว: Sun Dec 31 1899 14:04:00 GMT+0642 (Indochina Time)</li>
+<li value="12"><a href="https://www.youtube.com/watch?v=rSnqHy7X4mc" target="_blank">6 ปัญหาสุขภาพที่พบบ่อยในผู้สูงอายุยุคนี้! #ผู้สูงอายุ #วัยทอง #wellness</a> — ช่อง: Doctor Wellness Clinic, เผยแพร่: Sun Jun 19 2022 00:00:00 GMT+0700 (Indochina Time), วิว: 974, ความยาว: Sat Dec 30 1899 06:57:00 GMT+0642 (Indochina Time)</li>
+<li value="13"><a href="https://www.youtube.com/watch?v=jEbuPGOK4pA" target="_blank">เทรนด์ Wellness โอกาสรวยจากโลกแก่ ใน Longevity Economy | Executive Espresso EP.545</a> — ช่อง: THE SECRET SAUCE, เผยแพร่: Fri Apr 18 2025 00:00:00 GMT+0700 (Indochina Time), วิว: 100807, ความยาว: Sun Dec 31 1899 20:12:00 GMT+0642 (Indochina Time)</li>
+<li value="14"><a href="https://www.youtube.com/watch?v=44qKy01qkTw" target="_blank">เหตุผลที่ #ผู้สูงอายุ ควรตรวจสุขภาพประจำปี | #ผู้สูงวัย #ตรวจสุขภาพ</a> — ช่อง: Thainakarin Hospital, เผยแพร่: Thu Apr 21 2022 00:00:00 GMT+0700 (Indochina Time), วิว: 585, ความยาว: Sat Dec 30 1899 05:15:00 GMT+0642 (Indochina Time)</li>
+<li value="15"><a href="https://www.youtube.com/watch?v=QWvA_W3J5SE" target="_blank">เยี่ยมชม “บ้านธรรมชาติ” ศูนย์ดูแลสุขภาพผู้สูงวัย ในแบบ..ครบ จบ! ในที่เดียว l 02-07-66 Krisana Lalai</a> — ช่อง: Krisana Lalai, เผยแพร่: Thu Jul 06 2023 00:00:00 GMT+0700 (Indochina Time), วิว: 1241, ความยาว: Sat Dec 30 1899 05:41:00 GMT+0642 (Indochina Time)</li>
+<li value="16"><a href="https://www.youtube.com/watch?v=JYqUeEInPuI" target="_blank">การส่งเสริมสุขภาพผู้สูงอายุ  ชะลอ ชรา ชีวายืนยาว</a> — ช่อง: ศูนย์อนามัยที่11, เผยแพร่: Tue Aug 10 2021 00:00:00 GMT+0700 (Indochina Time), วิว: 21617, ความยาว: Sat Dec 30 1899 05:22:00 GMT+0642 (Indochina Time)</li>
+<li value="17"><a href="https://www.youtube.com/watch?v=Tr1Pr96UneY" target="_blank">รายการศิริราชเพื่อผู้สูงอายุ ตอน การดูแลเอาใจใส่ #ผู้สูงวัย ให้ไม่รู้สึกโดดเดี่ยว</a> — ช่อง: siriraj channel, เผยแพร่: Wed Feb 22 2023 00:00:00 GMT+0700 (Indochina Time), วิว: 11616, ความยาว: Sat Dec 30 1899 10:23:00 GMT+0642 (Indochina Time)</li>
+<li value="18"><a href="https://www.youtube.com/watch?v=H2BCcrwFCic" target="_blank">ชะลอความเสื่อมร่างกาย ยิ่งเริ่มไว ยิ่งได้เปรียบ! | เกลาแก้โรค EP.13 @healthydaisy</a> — ช่อง: Klaoshow, เผยแพร่: Mon Sep 23 2024 00:00:00 GMT+0700 (Indochina Time), วิว: 287828, ความยาว: Sun Dec 31 1899 07:19:00 GMT+0642 (Indochina Time)</li>
+<li value="19"><a href="https://www.youtube.com/watch?v=SRNUQLSysjs" target="_blank">WELLNESS : ศูนย์ส่งเสริมพฤฒพลังผู้สูงอายุ มหาวิทยาลัยเชียงใหม่</a> — ช่อง: สถาบันการแพทย์ทางเลือก, เผยแพร่: Thu Feb 27 2025 00:00:00 GMT+0700 (Indochina Time), วิว: 546, ความยาว: Sat Dec 30 1899 13:07:00 GMT+0642 (Indochina Time)</li>
+<li value="20"><a href="https://www.youtube.com/watch?v=oiVdMBBu22A" target="_blank">ดูแลผู้สูงอายุฟื้นฟูผู้ป่วยโรคหลอดเลือดสมอง Nijivillage Nursing home M2BRAIN wellness Clinic </a> — ช่อง: Tanavich M2BRIAN wellness , เผยแพร่: Wed Aug 20 2025 00:00:00 GMT+0700 (Indochina Time), วิว: 25882, ความยาว: Sat Dec 30 1899 05:52:00 GMT+0642 (Indochina Time)</li>
+<li value="21"><a href="https://www.youtube.com/watch?v=I8_kAWCaYpw" target="_blank">อาบป่า สปาเกลือ ท่องเที่ยวสุขภาพเพื่อผู้สูงอายุ | คนสู้โรค Daily | 30 ม.ค. 69</a> — ช่อง: Thai PBS, เผยแพร่: Fri Jan 30 2026 00:00:00 GMT+0700 (Indochina Time), วิว: 1152, ความยาว: Sun Dec 31 1899 00:57:00 GMT+0642 (Indochina Time)</li>
+<li value="22"><a href="https://www.youtube.com/watch?v=FD-i1wcbJ0Y" target="_blank">Leaders Podcast Ep.23 ทำไมแก่แล้วยังต้องเหนื่อย ใครมีผู้สูงอายุอยู่ที่บ้านต้องฟัง</a> — ช่อง: Leaders Performance & Wellness, เผยแพร่: Mon Feb 02 2026 00:00:00 GMT+0700 (Indochina Time), วิว: 1270, ความยาว: Sun Dec 31 1899 18:55:00 GMT+0642 (Indochina Time)</li>
+<li value="23"><a href="https://www.youtube.com/watch?v=dews9Vzd84M" target="_blank">ศูนย์ส่งเสริมพฤฒพลังผู้สูงอายุ มช. CMU Senior Wellness Center</a> — ช่อง: Chiang Mai University, เผยแพร่: Thu Jun 30 2022 00:00:00 GMT+0700 (Indochina Time), วิว: 12320, ความยาว: Sat Dec 30 1899 08:40:00 GMT+0642 (Indochina Time)</li>
+</ol>
+</section>
 </div>
-
-<div class="footer">
-  สร้างอัตโนมัติ ณ วันที่ 23/06/2026 14:42
-</div>
-
+<div class="footer">สร้างอัตโนมัติ ณ วันที่ 23/06/2026 15:18</div>
 </body>
 </html>
